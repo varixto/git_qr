@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><Style id="red"><IconStyle><Icon><href>http://maps.google.com/mapfiles/ms/icons/red-dot.png</href></Icon></IconStyle></Style> <Style id="yellow"><IconStyle><Icon><href>http://maps.google.com/mapfiles/ms/icons/yellow-dot.png</href></Icon></IconStyle></Style><Style id="green"><IconStyle><Icon><href>http://maps.google.com/mapfiles/ms/icons/green-dot.png</href></Icon></IconStyle></Style>
+<Folder><name>Open WiFis</name>
+	<Placemark>
+		<name><![CDATA[WBR-6002]]></name>
+		<description><![CDATA[BSSID: <b>00:11:6b:42:4a:2a</b><br/>Capabilities: <b></b><br/>Frequency: <b>2462</b><br/>Level: <b>-83</b><br/>Timestamp: <b>1333647156382</b><br/>Date: <b>05/04/2012 19:32:36</b>]]></description><styleUrl>#green</styleUrl>
+		<Point>
+		<coordinates>-6.012568473815918,42.07297503948212,791.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[flavia]]></name>
+		<description><![CDATA[BSSID: <b>e0:91:53:0a:64:65</b><br/>Capabilities: <b></b><br/>Frequency: <b>2437</b><br/>Level: <b>-92</b><br/>Timestamp: <b>1333647197309</b><br/>Date: <b>05/04/2012 19:33:17</b>]]></description><styleUrl>#green</styleUrl>
+		<Point>
+		<coordinates>-6.014150977134705,42.07135498523712,797.0</coordinates>
+		</Point>
+	</Placemark>
+</Folder><Folder><name>WEP WiFis</name>
+	<Placemark>
+		<name><![CDATA[WLAN_D7]]></name>
+		<description><![CDATA[BSSID: <b>00:23:f8:cc:1a:73</b><br/>Capabilities: <b>[WEP]</b><br/>Frequency: <b>2452</b><br/>Level: <b>-70</b><br/>Timestamp: <b>1333647057098</b><br/>Date: <b>05/04/2012 19:30:57</b>]]></description><styleUrl>#yellow</styleUrl>
+		<Point>
+		<coordinates>-6.014349460601807,42.0780873298645,800.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[JAZZTEL_0C]]></name>
+		<description><![CDATA[BSSID: <b>00:1a:2b:5c:27:61</b><br/>Capabilities: <b>[WEP]</b><br/>Frequency: <b>2462</b><br/>Level: <b>-84</b><br/>Timestamp: <b>1333647073191</b><br/>Date: <b>05/04/2012 19:31:13</b>]]></description><styleUrl>#yellow</styleUrl>
+		<Point>
+		<coordinates>-6.013700366020203,42.077513337135315,802.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[WLAN_77]]></name>
+		<description><![CDATA[BSSID: <b>e0:91:53:04:7a:b8</b><br/>Capabilities: <b>[WEP]</b><br/>Frequency: <b>2437</b><br/>Level: <b>-90</b><br/>Timestamp: <b>1333647085321</b><br/>Date: <b>05/04/2012 19:31:25</b>]]></description><styleUrl>#yellow</styleUrl>
+		<Point>
+		<coordinates>-6.014081239700317,42.076740860939026,801.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[WLAN_0D]]></name>
+		<description><![CDATA[BSSID: <b>00:23:f8:c9:50:ce</b><br/>Capabilities: <b>[WEP]</b><br/>Frequency: <b>2452</b><br/>Level: <b>-81</b><br/>Timestamp: <b>1333647101033</b><br/>Date: <b>05/04/2012 19:31:41</b>]]></description><styleUrl>#yellow</styleUrl>
+		<Point>
+		<coordinates>-6.013786196708679,42.075984477996826,796.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[WLAN_F6]]></name>
+		<description><![CDATA[BSSID: <b>e0:91:53:11:ff:66</b><br/>Capabilities: <b>[WEP]</b><br/>Frequency: <b>2437</b><br/>Level: <b>-91</b><br/>Timestamp: <b>1333647113000</b><br/>Date: <b>05/04/2012 19:31:53</b>]]></description><styleUrl>#yellow</styleUrl>
+		<Point>
+		<coordinates>-6.013174653053284,42.07520663738251,796.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[WLAN_D2]]></name>
+		<description><![CDATA[BSSID: <b>00:23:f8:b4:6e:fa</b><br/>Capabilities: <b>[WEP]</b><br/>Frequency: <b>2452</b><br/>Level: <b>-78</b><br/>Timestamp: <b>1333647154038</b><br/>Date: <b>05/04/2012 19:32:34</b>]]></description><styleUrl>#yellow</styleUrl>
+		<Point>
+		<coordinates>-6.012386083602905,42.073034048080444,791.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[WLAN_0F]]></name>
+		<description><![CDATA[BSSID: <b>00:16:38:c5:be:80</b><br/>Capabilities: <b>[WEP]</b><br/>Frequency: <b>2467</b><br/>Level: <b>-93</b><br/>Timestamp: <b>1333647163113</b><br/>Date: <b>05/04/2012 19:32:43</b>]]></description><styleUrl>#yellow</styleUrl>
+		<Point>
+		<coordinates>-6.013324856758118,42.072776556015015,792.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[WLAN_3F]]></name>
+		<description><![CDATA[BSSID: <b>00:23:f8:c0:48:63</b><br/>Capabilities: <b>[WEP]</b><br/>Frequency: <b>2452</b><br/>Level: <b>-93</b><br/>Timestamp: <b>1333647169257</b><br/>Date: <b>05/04/2012 19:32:49</b>]]></description><styleUrl>#yellow</styleUrl>
+		<Point>
+		<coordinates>-6.01377546787262,42.07256197929382,794.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[WLAN_B6]]></name>
+		<description><![CDATA[BSSID: <b>e0:91:53:4a:76:b9</b><br/>Capabilities: <b>[WEP]</b><br/>Frequency: <b>2437</b><br/>Level: <b>-86</b><br/>Timestamp: <b>1333647171654</b><br/>Date: <b>05/04/2012 19:32:51</b>]]></description><styleUrl>#yellow</styleUrl>
+		<Point>
+		<coordinates>-6.013796925544739,42.072502970695496,794.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[WLAN_11]]></name>
+		<description><![CDATA[BSSID: <b>e0:91:53:0f:fc:81</b><br/>Capabilities: <b>[WEP]</b><br/>Frequency: <b>2437</b><br/>Level: <b>-85</b><br/>Timestamp: <b>1333647179518</b><br/>Date: <b>05/04/2012 19:32:59</b>]]></description><styleUrl>#yellow</styleUrl>
+		<Point>
+		<coordinates>-6.014032959938049,42.07196116447449,794.0</coordinates>
+		</Point>
+	</Placemark>
+</Folder><Folder><name>Closed WiFis</name>
+	<Placemark>
+		<name><![CDATA[FTE-052F]]></name>
+		<description><![CDATA[BSSID: <b>00:25:69:6a:05:30</b><br/>Capabilities: <b>[WPA-PSK-TKIP]</b><br/>Frequency: <b>2412</b><br/>Level: <b>-85</b><br/>Timestamp: <b>1333647041131</b><br/>Date: <b>05/04/2012 19:30:41</b>]]></description><styleUrl>#red</styleUrl>
+		<Point>
+		<coordinates>-6.015529632568359,42.078264355659485,798.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[WLAN_7CEC]]></name>
+		<description><![CDATA[BSSID: <b>f4:3e:61:8c:7c:ed</b><br/>Capabilities: <b>[WPA-PSK-TKIP]</b><br/>Frequency: <b>2417</b><br/>Level: <b>-95</b><br/>Timestamp: <b>1333647083250</b><br/>Date: <b>05/04/2012 19:31:23</b>]]></description><styleUrl>#red</styleUrl>
+		<Point>
+		<coordinates>-6.013995409011841,42.07688570022583,800.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[vodafone0A0E]]></name>
+		<description><![CDATA[BSSID: <b>5c:4c:a9:70:0a:0f</b><br/>Capabilities: <b>[WPA-PSK-CCMP]</b><br/>Frequency: <b>2412</b><br/>Level: <b>-95</b><br/>Timestamp: <b>1333647121116</b><br/>Date: <b>05/04/2012 19:32:01</b>]]></description><styleUrl>#red</styleUrl>
+		<Point>
+		<coordinates>-6.012611389160156,42.074761390686035,796.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[Asymetrix]]></name>
+		<description><![CDATA[BSSID: <b>00:21:27:fe:82:7c</b><br/>Capabilities: <b>[WPA-PSK-TKIP+CCMP][WPA2-PSK-TKIP+CCMP-preauth]</b><br/>Frequency: <b>2437</b><br/>Level: <b>-91</b><br/>Timestamp: <b>1333647147294</b><br/>Date: <b>05/04/2012 19:32:27</b>]]></description><styleUrl>#red</styleUrl>
+		<Point>
+		<coordinates>-6.0118818283081055,42.07314670085907,790.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[Super7]]></name>
+		<description><![CDATA[BSSID: <b>94:0c:6d:a5:a6:d8</b><br/>Capabilities: <b>[WPA2-PSK-CCMP]</b><br/>Frequency: <b>2412</b><br/>Level: <b>-83</b><br/>Timestamp: <b>1333647157794</b><br/>Date: <b>05/04/2012 19:32:37</b>]]></description><styleUrl>#red</styleUrl>
+		<Point>
+		<coordinates>-6.012675762176514,42.07295358181,791.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[Angeleitor]]></name>
+		<description><![CDATA[BSSID: <b>00:1a:2b:0e:16:84</b><br/>Capabilities: <b>[WPA-PSK-TKIP]</b><br/>Frequency: <b>2422</b><br/>Level: <b>-92</b><br/>Timestamp: <b>1333647156164</b><br/>Date: <b>05/04/2012 19:32:36</b>]]></description><styleUrl>#red</styleUrl>
+		<Point>
+		<coordinates>-6.012568473815918,42.07297503948212,791.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[WLAN_55B1]]></name>
+		<description><![CDATA[BSSID: <b>38:72:c0:de:55:b4</b><br/>Capabilities: <b>[WPA-PSK-TKIP+CCMP]</b><br/>Frequency: <b>2442</b><br/>Level: <b>-88</b><br/>Timestamp: <b>1333647171554</b><br/>Date: <b>05/04/2012 19:32:51</b>]]></description><styleUrl>#red</styleUrl>
+		<Point>
+		<coordinates>-6.013796925544739,42.072502970695496,794.0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name><![CDATA[El Pilon]]></name>
+		<description><![CDATA[BSSID: <b>00:02:6f:5e:c8:ae</b><br/>Capabilities: <b>[WPA2-PSK-TKIP+CCMP]</b><br/>Frequency: <b>2412</b><br/>Level: <b>-91</b><br/>Timestamp: <b>1333647195213</b><br/>Date: <b>05/04/2012 19:33:15</b>]]></description><styleUrl>#red</styleUrl>
+		<Point>
+		<coordinates>-6.014150977134705,42.07144618034363,798.0</coordinates>
+		</Point>
+	</Placemark>
+</Folder>
+</Document></kml>

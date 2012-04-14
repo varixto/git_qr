@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=screen.width; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>ArkeoMap</title>
+      <link rel="stylesheet" href="tmt4p3.css" type="text/css">
+      
+	  <script type="text/javascript" src="tmt4p3.js"></script>
+      
+	
+	</head>
+  <body>
+
+	<div data-role="page" data-theme="c" id="page-map">
+
+	<div data-role="content" class="map-content">
+		<div id="map_canvas"></div>
+
+	<div id="mask"></div>
+	<div id="markerdiv"></div>
+	
+	<div id="controls" style="display:none;">
+	<div data-role="controlgroup" data-type="horizontal" >
+		<a href="#" id="current_pos_marker" data-role="button">&nbsp;&nbsp;<img src="images/markers/gmarker18h.png"/>&nbsp;&nbsp;</a>
+		<a href="#page-marker" data-role="button"><img src="images/markers/list18h.png"/>&nbsp;Markers</a>
+	</div>
+	</div>
+	
+	</div><!-- /content -->
+	
+	</div><!-- /page-map -->
+
+	<div data-role="page" data-theme="c" id="page-marker">
+
+	<div data-role="content">
+
+		<div data-role="collapsible" data-collapsed="true" id="instructions">
+			<h3>Instructions</h3>
+			<ul>
+				<li>Tap green marker para añadir marcador a la localización actual</li>
+				<li>Tap anywhere on map to add blue marker</li>
+				<li>Tap Markers ver lista de marcadores</li>
+				<li>Tap marker editar o borrar marcador</li>
+				<li>Drag marker anywhere to change its location</li>
+				<li>Tap marker in listview to see it centered on map</li>
+				<li>Tap gear icon in listview to edit or remove marker</li>
+			</ul>
+		</div>
+
+		<ul id="marker-list" data-role="listview" data-inset="true" data-split-icon="gear" data-split-theme="d">
+			<li data-role="list-divider">Salvar punto</li>
+			<li id="li-placeholder"><a href="#page-map"><h4 style="color:#aaa;">(Tap on map to add marker)</h4></a><a href="#page-map">Editar</a></li>
+		</ul>
+
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="d" data-position="fixed">
+	<div data-role="navbar">
+	<ul>
+	    	<li><a href="#page-map">Return to Map</a></li>
+	</ul>
+	</div>
+	</div>
+	
+	</div><!-- /page-marker -->
+
+  </body>
+</html>
