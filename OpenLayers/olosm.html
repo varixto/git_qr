@@ -1,14 +1,7 @@
-<!-- OSMAccessFromGoogle.html 
-	Ejemplo de acceso a los mapas de OpenStreetMap desde la API de Google Maps V3
-	Desarrollado por Santiago Higuera el 12 de Septiembre de 2.010
-	web : Descartes 
-		http://www.ingemoral.es 
-	Twitter : @santiagohiguera
--->
 <!DOCTYPE html>
 <html>
 <head>
-	<title>OSMAccessFromGoogle</title>
+	<title>OSM</title>
 	<!-- Etiquetas meta de Google -->
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +24,7 @@
 		// Objeto google.maps.Map
 		var map;
 		// Centro del mapa
-		var center = new google.maps.LatLng(43.4578,-3.7886);
+		var center = new google.maps.LatLng(42,-6);
 		// Definir el tipo de mapa
 		// Para Mapnik: http://tile.openstreetmap.org/
 		var osmMapnik = new google.maps.ImageMapType({
@@ -100,7 +93,7 @@
 				document.getElementById("osmattribution").innerHTML="";
 				document.getElementById("osmlogo").innerHTML="";
 			}
-			document.getElementById("dlogo").innerHTML="Ejemplo de acceso a OpenStreetMap desde Google API V3 (<a href='http://www.ingemoral.es'>Descartes</a>-2010)";
+			document.getElementById("dlogo").innerHTML="OpenStreetMap desde Google API V3 (<a href='https://github.com/varixto'>IdeARK</a>)";
 		}
 		function initialize() {
 			// Opciones que se pasarÃ¡n al constructor del mapa
