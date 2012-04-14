@@ -1,25 +1,45 @@
 <html>
-
-    <head>
-        <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
-
-        <script type="text/javascript">
-
-           var mapa, capa;
-
-           function init(){
-               mapa = new OpenLayers.Map('mapa');
-               capa = new OpenLayers.Layer.WMS( "Mapa Base",
-        	     "http://www.idee.es/wms/IDEE-Base/IDEE-Base",
-        	     {layers: 'Todas', projection: 'EPSG:4230'} );
-               mapa.addLayer(capa);
-               mapa.zoomToMaxExtent();
+ 
+    <head> 
+        
+        <title>Puntos Dinámicos</title> 
+        <meta charset="UTF-8">
+    	<script src="http://www.openlayers.org/api/OpenLayers.js"></script> 
+        <script type="text/javascript"> 
+            var map, vectorLayer, controls, drawPoint;
+            function init(){
+                map = new OpenLayers.Map('map');
+                var wms = new OpenLayers.Layer.WMS( "OpenLayers WMS","http://labs.metacarta.com/wms/vmap0?", {layers: 'basic'});
+    
+                vectorLayer = new OpenLayers.Layer.Vector("Points");
+ 
+                map.addLayers([wms, vectorLayer]);
+                map.addControl(new OpenLayers.Control.LayerSwitcher());
+                map.addControl(new OpenLayers.Control.MousePosition());
+ 
+                drawPoint=new OpenLayers.Control.DrawFeature(vectorLayer,OpenLayers.Handler.Point);
+				drawPoint.featureAdded = featAdded;
+				map.addControl(drawPoint);
+				
+                map.setCenter(new OpenLayers.LonLat(0, 0), 3);
+                
             }
-        </script>
-    </head>
-
-    <body onload="init()">
-        <h2>Prueba1</h2>
-        <div id="mapa"  style="width: 1200px; height: 640px"></div>
-    </body>
-</html>
+            function featAdded() {
+				var el = document.getElementById("text");
+				el.value=drawPoint.handler.point.geometry.x+", "+drawPoint.handler.point.geometry.y;
+            }
+            function dibujar() {
+            	drawPoint.activate();
+            }
+            function parar() {
+				drawPoint.deactivate();
+            }
+        </script> 
+    </head> 
+    <body onload="init()"> 
+        <div id="map" style="width: 480px; height: 300px;"></div> 
+        <input type="button" value="Dibujar" onclick="dibujar()"/>
+        <input type="button" value="Parar" onclick="parar()"/>
+        Último punto: <input type="text" value="no set" id="text" width="30"/>
+    </body> 
+</html> 
