@@ -1,0 +1,143 @@
+<!-- OSMAccessFromGoogle.html 
+	Ejemplo de acceso a los mapas de OpenStreetMap desde la API de Google Maps V3
+	Desarrollado por Santiago Higuera el 12 de Septiembre de 2.010
+	web : Descartes 
+		http://www.ingemoral.es 
+	Twitter : @santiagohiguera
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OSMAccessFromGoogle</title>
+	<!-- Etiquetas meta de Google -->
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- Hoja de estilo del programa -->
+	<style type="text/css">
+		html { height: 100% }
+		body { font-family: Verdana, sans-serif; height: 100%; margin: 0px; padding: 0px }
+		img, a { border: none; margin: 0; padding: 0;}
+		#map { height: 100%; width: 100% }
+		#osmattribution { position: absolute; bottom: 8px; left: 224px; color: #2f4f4f; font-size: 0.8em; }
+		#osmlogo {position: absolute; bottom: 2px; left: 200px; width: 24px; height: 24px; border: none;}	
+		#dlogo {position: absolute; top: 6px; left: 124px; direction: vertical; color: #2f4f4f; font-size: 0.7em; text-align: right}
+	</style>
+	<!-- Cargar la API de Google Maps -->
+	<script type="text/javascript"
+	    src="http://maps.google.com/maps/api/js?sensor=true">
+	</script>
+	<!-- script con nuestro programa -->
+	<script type="text/javascript">
+		// Objeto google.maps.Map
+		var map;
+		// Centro del mapa
+		var center = new google.maps.LatLng(43.4578,-3.7886);
+		// Definir el tipo de mapa
+		// Para Mapnik: http://tile.openstreetmap.org/
+		var osmMapnik = new google.maps.ImageMapType({
+			// FunciÃ³n que devuelve la url de la loseta 
+			getTileUrl: function(coord, zoom) {
+				return "http://tile.openstreetmap.org/" +
+				zoom + "/" + coord.x + "/" + coord.y + ".png";
+			},
+			// TamaÃ±o de las losetas
+			tileSize: new google.maps.Size(256, 256),
+			// Â¿Es formato .png?"
+			isPng: true,
+			// Texto que aparecerÃ¡ al sobrevolar el control MapType
+			alt: "Mapnik",
+			// Nombre en el control MapType
+			name: "Mapnik",
+			// Nivel mÃ¡ximo de zoom
+			maxZoom: 19
+		});
+		// Para Osmarender : http://tah.openstreetmap.org/Tiles/tile/
+		var osmOsmarender = new google.maps.ImageMapType({
+			// FunciÃ³n que devuelve la url de la loseta 
+			getTileUrl: function(coord, zoom) {
+				return "http://tah.openstreetmap.org/Tiles/tile/" +
+				zoom + "/" + coord.x + "/" + coord.y + ".png";
+			},
+			// TamaÃ±o de las losetas
+			tileSize: new google.maps.Size(256, 256),
+			// Â¿Es formato .png?"
+			isPng: true,
+			// Texto que aparecerÃ¡ al sobrevolar el control MapType
+			alt: "Osmarender",
+			// Nombre en el control MapType
+			name: "Osmarender",
+			// Nivel mÃ¡ximo de zoom
+			maxZoom: 19
+		});
+		// Para CycleMap : http://tile.opencyclemap.org/cycle/
+		var osmCycleMap = new google.maps.ImageMapType({
+			// FunciÃ³n que devuelve la url de la loseta 
+			getTileUrl: function(coord, zoom) {
+				return "http://tile.opencyclemap.org/cycle/" +
+				zoom + "/" + coord.x + "/" + coord.y + ".png";
+			},
+			// TamaÃ±o de las losetas
+			tileSize: new google.maps.Size(256, 256),
+			// Â¿Es formato .png?"
+			isPng: true,
+			// Texto que aparecerÃ¡ al sobrevolar el control MapType
+			alt: "CycleMap",
+			// Nombre en el control MapType
+			name: "CycleMap",
+			// Nivel mÃ¡ximo de zoom
+			maxZoom: 19
+		});
+		function setAttribution_handler() {
+			if(map.getMapTypeId() == 'OSMARENDER' ||
+				map.getMapTypeId() == 'MAPNIK' ||
+				map.getMapTypeId() == 'CYCLEMAP' ) {
+				document.getElementById("osmattribution").innerHTML="Mapdata <a href=\"http://www.openstreetmap.org/\">OpenStreetMap</a>"+
+					" and contributors ("+
+					"<a	href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-bySA</a>)";
+				document.getElementById("osmlogo").innerHTML="<a href=\"http://www.openstreetmap.org/\">"+
+					"<img src=\"http://www.openstreetmap.org/images/osm_logo.png\" style=\"width: 24px; height: 24px;\"/></a>";				
+			} else {
+				document.getElementById("osmattribution").innerHTML="";
+				document.getElementById("osmlogo").innerHTML="";
+			}
+			document.getElementById("dlogo").innerHTML="Ejemplo de acceso a OpenStreetMap desde Google API V3 (<a href='http://www.ingemoral.es'>Descartes</a>-2010)";
+		}
+		function initialize() {
+			// Opciones que se pasarÃ¡n al constructor del mapa
+			var mapOptions = { 
+			  	// DefiniciÃ³n del control TipoDeMapa,
+			  	// equivalente al LayerSwitcher de OpenLayers
+		  	  	mapTypeControl: true,
+		  	  	mapTypeControlOptions: { 
+		  			// Los mapas que se incluirÃ¡n en el control
+		  	  		mapTypeIds: ['MAPNIK', 'OSMARENDER', 'CYCLEMAP', 
+		  	  		    google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID,
+		  	  			google.maps.MapTypeId.TERRAIN, google.maps.MapTypeId.SATELLITE],
+		  			// El estilo del control: DEFAULT, DROPDOWN_MENU, HORIZONTAL_BAR
+			  		style: google.maps.MapTypeControlStyle.DROPDOWN_MENU  	
+		  	  	}
+		  	};
+		  	// Llamada al constructor de la clase google.maps.Map
+			map = new google.maps.Map(document.getElementById("map"),mapOptions);
+			// Registrar los tipos de mapa OSM
+			map.mapTypes.set('MAPNIK',osmMapnik);
+			map.mapTypes.set('OSMARENDER',osmOsmarender);
+			map.mapTypes.set('CYCLEMAP',osmCycleMap);
+			// Coordenadas del centro del mapa
+			map.setCenter(center);
+			// Factor zoom
+			map.setZoom(12); 
+			// Establecer el mapa que se mostrarÃ¡ inicialmente activado
+			map.setMapTypeId('CYCLEMAP');
+			// AÃ±adimos un controlador para mostrar el attribution de OSM
+			google.maps.event.addListener(map, 'maptypeid_changed', setAttribution_handler);
+		}
+	</script>
+</head>
+<body onload="initialize()">
+  <div id="map"></div>
+  <div id="osmattribution"></div>
+  <div id="osmlogo"></div>
+  <div id="dlogo"></div>
+</body>
+</html>
