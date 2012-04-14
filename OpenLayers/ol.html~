@@ -1,0 +1,25 @@
+<html>
+
+    <head>
+        <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+
+        <script type="text/javascript">
+
+           var mapa, capa;
+
+           function init(){
+               mapa = new OpenLayers.Map('mapa');
+               capa = new OpenLayers.Layer.WMS( "Mapa Base",
+        	     "http://www.idee.es/wms/IDEE-Base/IDEE-Base",
+        	     {layers: 'Todas', projection: 'EPSG:4230'} );
+               mapa.addLayer(capa);
+               mapa.zoomToMaxExtent();
+            }
+        </script>
+    </head>
+
+    <body onload="init()">
+        <h2>Hola Mundo (OpenLayers)</h2>
+        <div id="mapa"  style="width: 600px; height: 300px"></div>
+    </body>
+</html>
