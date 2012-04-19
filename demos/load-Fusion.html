@@ -42,7 +42,11 @@
                 <div id="map_canvas"></div>
             </div>
 			
+<<<<<<< HEAD
 			<p><strong>Zoom</strong> y pincha en un marcador para m·s informaciÛn. <strong>Tap</strong> cambia entre capas.<br/></p>
+=======
+			<p><strong>Zoom</strong> y pincha en un marcador para m√°s informaci√≥n. <strong>Tap</strong> cambia entre capas.<br/></p>
+>>>>>>> fd057b63ac7f533ce206bdf77c874ea924c76dc9
 
 			<a class="buttonize" id="ex1-heatmap">Heatmap</a>
 			<a class="buttonize" id="ex1-query" style="margin:0 7px;">Query</a>
@@ -113,7 +117,11 @@
 			$('#dialog').append('<br/><br/><p>Fusion tablas de Ruleo.</p>');
 			$("#dialog").dialog({ title : 'Ruleo', closeOnEscape: false, modal : 'true', hide: 'fade', maxHeight: 200 });
 
+<<<<<<< HEAD
 			$('#map_canvas').gmap({ 'center': new google.maps.LatLng(42, -6), 'zoom': 7, 'mapTypeId' : google.maps.MapTypeId.ROADMAP,
+=======
+			$('#map_canvas').gmap({ 'center': new google.maps.LatLng(42, -6), 'zoom': 11, 'mapTypeId' : google.maps.MapTypeId.ROADMAP,
+>>>>>>> fd057b63ac7f533ce206bdf77c874ea924c76dc9
 				'callback': function(map) {
 					
 					$('#map_canvas').gmap('loadFusion', { 'query': { 'from': '3547749' } });
@@ -128,7 +136,11 @@
                }
 			);
 			$('#ex1-query').toggle (function() {
+<<<<<<< HEAD
 					$('#map_canvas').gmap('getService', 'FusionTablesLayer').setOptions( {'query' : {'from': '3547749',  'select' : 'name',  'where' : 'source=Zamora' }});
+=======
+					$('#map_canvas').gmap('getService', 'FusionTablesLayer').setOptions( {'query' : { 'from': '3547749', 'select' : 'name', 'where' : 'name=Iglesia' }});
+>>>>>>> fd057b63ac7f533ce206bdf77c874ea924c76dc9
 				}, function() {
 					$('#map_canvas').gmap('getService', 'FusionTablesLayer').setOptions( {'query' : { 'from': '3547749' }});
                       }
@@ -153,7 +165,4 @@
 
     </body>
 </html>
-
-
-
       
