@@ -1,0 +1,370 @@
+/*
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU AFFERO General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+or see http://www.gnu.org/licenses/agpl.txt.
+*/
+
+/* OSRM CSS styles */
+
+
+/* map -> fullscreen */
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #map {
+    height: 100%;
+}
+#map {
+	z-index: 0;
+}
+
+
+/* styles for gui */
+.vquad
+{
+	height:10px;
+}
+
+.gui-wrapper
+{
+	position:absolute;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	background-color:#666666;
+	background-color:rgba(0, 0, 0, 0.25);
+	transition:left 1s;
+	-moz-transition:left 1s;
+	-webkit-transition:left 1s;
+	-o-transition:left 1s;
+	-ms-transition:left 1s;
+}
+.gui-box
+{
+	position:absolute;
+	background-color:#ffffff;	
+	background-color:rgba(255,255,255,1);
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;	
+	margin:5px;
+	padding:5px;	
+}
+
+#main-wrapper
+{
+	width:410px;
+	height:95%;
+	top:5px;
+	left:5px;
+}
+#main-input
+{
+	width:390px;
+	height:200px;
+}
+#main-output
+{
+	width:390px;
+	top:220px;
+	bottom:0px;
+}
+
+#blob-wrapper
+{
+	left:-5px;
+	top:5px;
+	width:36px;
+	height:36px;
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-top-left-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	visibility:hidden;
+}
+#blob-input
+{
+	width:26px;
+	height:26px;
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-top-left-radius:0px;
+	-webkit-border-bottom-left-radius:0px;	
+	padding:0px;
+}
+
+.main-toggle-out
+{
+	cursor:pointer;
+	position:absolute;
+	right:5px;
+	top:5px;
+	width:16px;
+	height:16px;
+	background-image:url("images/cancel.png");	
+}
+.main-toggle-out:hover
+{
+	background-image:url("images/cancel_hover.png");
+}
+.main-toggle-out:active
+{
+	background-image:url("images/cancel_active.png");
+}
+.main-toggle-in
+{
+	cursor:pointer;
+	position:absolute;
+	right:5px;
+	top:5px;
+	width:16px;
+	height:16px;
+	background-image:url("images/restore.png");	
+}
+.main-toggle-in:hover
+{
+	background-image:url("images/restore_hover.png");
+}
+.main-toggle-in:active
+{
+	background-image:url("images/restore_active.png");
+}
+
+.main-options
+{
+	position:relative;
+	font-size:10px;
+}
+.main-options-left-box
+{
+	position:absolute;
+	left:5px;
+	top:0px;
+}
+.main-options-right-box
+{
+	position:absolute;
+	right:5px;
+	top:5px;
+}
+#options-toggle
+{
+	cursor:pointer;
+	color:#0000ff
+}
+#options-toggle:hover
+{
+	color:#ff0000
+}
+#options-box
+{
+	visibility:hidden;
+}
+
+#osrm-logo
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 192px;
+    height: 50px;
+	text-align:center;
+	vertical-align: middle;    
+}
+
+.input-box
+{
+	width: 250px;
+}
+
+
+.full
+{
+	width:100%;
+}
+.right
+{
+	text-align:right;
+}
+.center
+{
+	text-align:center;
+}
+
+#information-box
+{
+	position:absolute;
+	bottom:15px;
+	top:60px;
+	width:380px;
+	font-size:12px;
+	overflow:auto;
+	margin:5px;
+}
+
+.route-summary
+{
+	font-size: 12px;
+}
+#gpx-link
+{
+	color:#0000ff;
+	text-decoration:none;
+	cursor:pointer;
+}
+#gpx-link:hover
+{
+	color:#ff0000;
+}
+.results-table
+{
+	border-spacing:0px;
+}
+.results-odd
+{
+	background-color: #FAF3E9; //#ffffff;
+}
+.results-even
+{
+	background-color: #F2DE9C; //#ffffe0;
+}
+.result-counter
+{
+	text-align:right;
+	vertical-align: top;
+	width:30px;
+	font-weight:bold;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:1px;
+	padding-bottom:1px;
+}
+.result-items
+{
+	text-align:left;
+	vertical-align: middle;
+	width:100%;
+	padding-left:1px;
+	padding-right:1px;
+	padding-top:1px;
+	padding-bottom:1px;	
+}
+.result-direction
+{
+	width:30px;
+	padding-left:1px;
+	padding-right:1px;
+	padding-top:1px;
+	padding-bottom:1px;	
+}
+.result-distance
+{
+	text-align:right;
+	vertical-align: middle;	
+	width:30px;
+	padding-left:1px;
+	padding-right:1px;
+	padding-top:1px;
+	padding-bottom:1px;	
+}
+.result-item
+{
+	cursor:pointer;
+	color:#000000
+}
+.result-item:hover
+{
+	color:#ff0000
+}
+
+#legal-notice
+{
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	padding:5px;
+	font-size:10px;
+}
+
+
+/* utility styles (defined above buttons, so that buttons retain cursor:pointer)*/
+.not-selectable
+{
+	cursor:default;
+	-moz-user-select: -moz-none;  
+	-webkit-user-select: none;  
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.text-selectable
+{
+	cursor:default;
+	-moz-user-select: text;  
+	-webkit-user-select: text;  
+	-ms-user-select: text;
+	user-select: text;
+}
+
+
+/* buttons */
+.button
+{
+	cursor:pointer;
+	padding:2px 10px 2px 10px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	background-color:#EEEEEE;
+	border:1px solid #999999;
+	color:#333333;
+	text-decoration:none;
+	font-size:11px;
+	outline-style:none;  
+}
+.button:hover
+{
+	background-color:#F9F9F9;
+	color:#000000;
+}
+.button:active
+{
+	background-color:#F4F4F4;
+	color:#FF0000;
+}
+
+
+.delete-marker
+{
+	cursor:pointer;
+	position:absolute;
+	right:5px;
+	top:3px;
+	width:16px;
+	height:16px;
+	background-image:url("images/cancel.png");
+	visibility:hidden;	
+}
+.delete-marker:hover
+{
+	background-image:url("images/cancel_hover.png");
+}
+.delete-marker:active
+{
+	background-image:url("images/cancel_active.png");
+}

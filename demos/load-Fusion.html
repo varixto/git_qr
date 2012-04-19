@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         
-        <title>Google Fusion tables - Google maps jQuery plugin</title>
+        <title>Fusion tables </title>
         <meta name="keywords" content="Google maps, jQuery, plugin, Google Fusion tables" />
 		<meta name="description" content="An example with jQuery and Google Fusion tables using Google maps jQuery plugin" />
 		<meta http-equiv="content-language" content="en" />
@@ -35,39 +35,29 @@
 		<div id="doc">
 		
 			<div id="hd">
-				<h2><span class="gmap-title">jQuery Google Maps Plugin</span><br/>Fusion Tables and Markers</h2>
+				<h2><span class="gmap-title">Fusion Tables </span><br/></h2>
 			</div>
 			
 			<div class="gradient ui-corner-all shadow-all" id="map_item">
                 <div id="map_canvas"></div>
             </div>
 			
-			<p><strong>Zoom</strong> in and tap on marker for accident details. <strong>Tap</strong> on buttons to toggle fusion layers or map options.<br/></p>
+			<p><strong>Zoom</strong> y pincha en un marcador para más información. <strong>Tap</strong> cambia entre capas.<br/></p>
 
 			<a class="buttonize" id="ex1-heatmap">Heatmap</a>
 			<a class="buttonize" id="ex1-query" style="margin:0 7px;">Query</a>
 			<a class="buttonize" id="ex1-bicycle">Bicycle</a>
-			<a class="buttonize" id="ex1-traffic" style="margin:0 7px;">Traffic</a>
+			<a class="buttonize" id="ex1-traffic" style="margin:0 7px;">Traffic</a><br><br><br>
 			
-			<p><br/><strong>Query</strong> shows all bike accidents in October 2010.</p>
-
-			<p>Fusion data from the San Francisco <a href="http://googlecode.blogspot.com/2011/05/visualizing-public-data-with-google.html?m=1">Bike Accident Tracker</a>
-			and <a href="http://www.baycitizen.org/profiles/aurelio-tinio/">Aurelio Tinio</a>.</p>
+			<p>Datos de Wikipedia <a href="http://wikipedia.es">BIC Wikipedia</a>
+			</p>
 
 			<div id="gmap-info">
-			<h3 style="color:#008595;">Using jQuery UI with Google Maps</h3>
-			<p>
-				Download <a href="http://jquery.com/">jQuery 1.4.X or higher</a> and <a href="http://jqueryui.com/">jQuery UI 1.8.X or higher</a> or
-				use <a href="http://code.google.com/intl/sv-SE/apis/libraries/devguide.html">Google</a> or <a href="http://www.asp.net/ajaxlibrary/cdn.ashx">Microsoft</a> 
-				<abbr title="Content delivery network"><a href="http://en.wikipedia.org/wiki/Content_delivery_network">CDN</a></abbr>.
-				Download the <a href="http://code.google.com/p/jquery-ui-map/">jQuery Google Maps Plugin</a>.
-				Download GMap Demo <a href="https://github.com/libbybaldwin/GMap-Demo-App">source</a> for examples.
-			</p>
 			</div>
 			<div id="dialog"></div>
 		</div>
 		<div class="ftbar">
-			<p><a class="buttonize ftr" rel="external" href="../index.html">Return to Menu</a><a class="buttonize ftr" style="float:right;" rel="external" href="../about.html">About GMap Demo</a></p>		
+			<p><a class="buttonize ftr" rel="external" href="../index.html">Menu</a><a class="buttonize ftr" style="float:right;" rel="external" href="../about.html">Ark GMap Demo</a></p>		
 		</div>
 
 		<script type="text/javascript">
@@ -120,13 +110,13 @@
 
 			$('.buttonize').fadeIn(3000);
 								
-			$('#dialog').append('<br/><br/><p>Loading Fusion Table for San Franciso Bike Accident data complied by www.baycitizen.org.</p>');
-			$("#dialog").dialog({ title : 'Fusion Table Layer', closeOnEscape: false, modal : 'true', hide: 'fade', maxHeight: 200 });
+			$('#dialog').append('<br/><br/><p>Fusion tablas de Ruleo.</p>');
+			$("#dialog").dialog({ title : 'Ruleo', closeOnEscape: false, modal : 'true', hide: 'fade', maxHeight: 200 });
 
-			$('#map_canvas').gmap({ 'center': new google.maps.LatLng(37.748457761603355, -122.43576049804688), 'zoom': 11, 'mapTypeId' : google.maps.MapTypeId.ROADMAP,
+			$('#map_canvas').gmap({ 'center': new google.maps.LatLng(42, -6), 'zoom': 7, 'mapTypeId' : google.maps.MapTypeId.ROADMAP,
 				'callback': function(map) {
 					
-					$('#map_canvas').gmap('loadFusion', { 'query': { 'from': '433634' } });
+					$('#map_canvas').gmap('loadFusion', { 'query': { 'from': '3547749' } });
 					var t = setTimeout(function() {$('#dialog').dialog('close');}, 2000);						
 				}
 			});						
@@ -138,9 +128,9 @@
                }
 			);
 			$('#ex1-query').toggle (function() {
-					$('#map_canvas').gmap('getService', 'FusionTablesLayer').setOptions( {'query' : { 'from': '433634', 'select' : 'FullAddress', 'where' : 'Year=2010 AND Month=10' }});
+					$('#map_canvas').gmap('getService', 'FusionTablesLayer').setOptions( {'query' : {'from': '3547749',  'select' : 'name',  'where' : 'source=Zamora' }});
 				}, function() {
-					$('#map_canvas').gmap('getService', 'FusionTablesLayer').setOptions( {'query' : { 'from': '433634' }});
+					$('#map_canvas').gmap('getService', 'FusionTablesLayer').setOptions( {'query' : { 'from': '3547749' }});
                       }
 			);
 			var trafficLayer = new google.maps.TrafficLayer();
