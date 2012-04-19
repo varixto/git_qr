@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
@@ -44,3 +45,109 @@ apuntando a un tag para la ocasión</H2>
 Bueno parece que ya lo tenemos casi manillado, <a href="http://varixto.github.com/git_qr/OpenLayers/ol.html">OPENLAYERS</a>
   </body>
 </html>
+=======
+<!DOCTYPE html> 
+<html> 
+	<head>	
+		<title>ARK_JQMGM</title>
+		<meta http-equiv="content-language" content="en"/>
+        <meta name="viewport" content="width=screen.width, initial-scale=1.0, user-scalable=no" />  
+
+        <link rel="stylesheet" href="jquery.mobile/jquery.mobile.min.20110527.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="mobile.demos/gmapdemo.css" />
+ 
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+<!--         <script type="text/javascript" src="jquery.mobile/jquery-1.5.2.js"></script> -->
+<!--         <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script> -->
+        <script src="jquery.mobile/jquery-1.5.2.min.jsX"></script>
+        <script type="text/javascript" src="jquery.mobile/jquery.mobile.min.20110527.js"></script>
+	    <script type="text/javascript" src="ui/jquery.ui.map.min.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="phonegap.0.9.5.1.js"></script>
+	
+	</head> 
+
+	<body> 
+
+		<div data-role="page" class="gmap-bg" id="page-home">
+
+			<div data-role="header" data-theme="a" data-position="inline" data-backbtn="false">
+				<h1><span style="color:#eef;">Ark_Gmap</span></h1>
+				<a rel="external" href="about.html" class="ui-btn-right" style="color:#eef;">Sobre</a>
+			</div>
+
+			<div data-role="content">	
+			<h1 style="line-height:150%;font-size:18px;color:#008695;text-align:center;margin:0 1em 0.2em;">jQuery Google Maps OSM OpenLayers<br/>
+				
+
+				<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d" style="margin-top:0.4em;"> 
+					<li data-role="list-divider">jQuery Mobile & Google</li> 
+					<li><a rel="external" href="mobile.demos/gmapdemo1.html">Capas y Localizacion</a></li>
+					<li><a rel="external" href="mobile.demos/gmapdemo2.html">Geocoder tabla de datos</a></li> 
+					<li><a rel="external" href="mobile.demos/gmapdemo5.html">Panoramio Layer</a></li> 
+				</ul>
+				
+				<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d" style="margin-top:0.4em;"> 
+					<li data-role="list-divider">OSM y OpenLayers</li> 
+					<li><a rel="external" href="http://varixto.github.com/rutapg/main.html">Calculo de Rutas</a></li>
+					<li><a rel="external" href="http://varixto.github.com/git_qr/OpenLayers/ol.html">Dibujar </a></li> 
+					<li><a rel="external" href="http://varixto.github.com/git_qr/OpenLayers/olosm.html">Streetview</a></li> 
+				</ul>
+				
+				<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d" style="margin-top:0.4em;"> 
+					<li data-role="list-divider">Repositorio Git</li> 
+					<li><a rel="external" href="https://github.com/varixto">Repositorio</a></li>
+					
+				</ul>
+				
+				<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d" id="ui-example-list"> 
+					<li data-role="list-divider">jQuery UI & Google</li> 
+					<li><a rel="external" href="demos/click-drag-geo-search.html">Geobusqueda tabla de datos</a></li>
+					<li><a rel="external" href="demos/advanced-example.html">Microformatos</a></li>
+					<li><a rel="external" href="demos/load-Fusion.html">Google Fusion Tables</a></li>
+					<li><a rel="external" href="demos/google-maps-jquery-markerclusterer.html">Agrupacion de marcadores</a></li>
+					<li><a rel="external" href="demos/google-maps-jquery-filtering.html">Control personalizado, filtro por tag</a></li>
+					<li><a rel="external" href="demos/multiple-maps-example.html">Mapas Multiples en una Pagina</a></li>
+					<li><a rel="external" href="demos/load-JSON-example.html">Datos JSON</a></li>
+					<li><a rel="external" href="demos/load-RDFa-example.html">Datos RDFa</a></li>
+					<li><a rel="external" href="demos/load-Microformat-example.html">Microformatos</a></li>
+				</ul>
+
+			</div>
+			
+		</div>
+
+    	<div id="ft" class="hidden">
+		&#169; Copyright 2011 Libby Baldwin and Mobile Developer Solutions
+		<div id="hcard-Elizabeth-Ann-Baldwin" class="vcard">
+			<span class="fn n"> <span class="given-name">Elizabeth</span>
+				<span class="family-name">Baldwin</span> </span> <span class="adr">
+				<span class="locality">Alameda, California</span> <span
+				class="country-name">USA</span> </span> <span class="url">http://www.mobiledevelopersolutions.com/
+			</span>
+		</div>
+		&#169; Copyright 2011 Johan Säll Larsson
+		<div id="hcard-Johan-Säll-Larsson" class="vcard">
+			<span class="fn n"> <span class="given-name">Johan</span> <span
+				class="family-name">Säll Larsson</span> </span> <span class="adr"> <span
+				class="locality">Göteborg</span>, <span class="country-name">Sweden</span>
+			</span> <span class="url">http://code.google.com/p/jquery-ui-map/ </span>
+		</div>
+		</div>	
+		
+		<script type="text/javascript">
+		$('#page-home').live("pagebeforecreate", function() {
+ 			var useragent = navigator.userAgent;
+       		// alert(useragent);
+  			if ((useragent.indexOf('Android 3.') != -1) && (screen.width >= 800) && (screen.height >= 800)) {
+  				// conservatively adding Microdata only to Android 3 Tabs or desktop
+				$('#ui-example-list').append('<li><a rel="external" href="demos/load-Microdata-example.html">Markers from Microdata</a></li>');			
+			} else if ((useragent.indexOf('Android 2.') != -1 ) || (useragent.indexOf('Android 3.') != -1 )) {
+ 			} else {
+				$('#ui-example-list').append('<li><a rel="external" href="demos/load-Microdata-example.html">Markers from Microdata</a></li>');
+  			}
+		});
+	</script>
+	</body>
+	
+</html>
+>>>>>>> origin/gh-pages
