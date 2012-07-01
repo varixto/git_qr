@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>combatesxlahistoria - ruta 1</name>
+	<open>1</open>
+	<description>Ruta 1 - Campus de Batalla
+En los meses de noviembre y diciembre de 2008 una serie de trabajos arqueológicos (prospección, excavación y documentación de impactos en las fachadas de los edificios históricos de la Ciudad Universitaria) e históricos (archivos militares, entrevistas a combatientes) permitieron rescatar las marcas históricas, las cicatrices, de un conflicto y de una resistencia silenciada más de 70 años por la otra memoria histórica, la del régimen franquista, materializada aún hoy día en el “Arco de Triunfo” de Moncloa.</description>
+	<NetworkLink>
+		<name>combatesxlahistoria - ruta 1</name>
+		<open>1</open>
+		<Link>
+			<href>http://maps.google.es/maps/ms?ie=UTF8&amp;authuser=0&amp;hl=es&amp;oe=UTF8&amp;msa=0&amp;msid=217355806842500197704.0004c17b94af08d184240&amp;output=kml</href>
+		</Link>
+	</NetworkLink>
+</Document>
+</kml>
